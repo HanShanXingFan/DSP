@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				background: violet;
+			}
+			button{
+				font-size: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<button>点击</button>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript">
+			合成事件
+			$(".box").hover(function(){
+				$(this).css("background","skyblue");
+			},function(){
+				$(this).css("background","violet");
+			});
+			$("button").toggle(function(){
+				$(".box").hide(1000);
+			},function(){
+				$(".box").show(1000);
+			});
+			
+			
+			//事件对象-e.target不是jq对象需要转换$(e.target)
+			$(".box").click(function(e){
+				console.log(e.target);
+				$(e.target).css({
+					width:200,
+				})
+				e.keyCode;
+				e.clientX;
+				e.StopIteration();
+				e.preventDefault();
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jqDom常用方法	</title>
+	</head>
+	<body>
+		<div class="outer">
+			<ul class="mylist">
+				<li><span class="firstSpan">这里是子元素span</span></li>
+				<li><span>这里是子元素span</span></li>
+				<li class="lastLi"><span>这里是子元素span</span></li>
+			</ul>
+			<ul class="mylist">
+				<li></li>
+				<li></li>
+				<li class="lastLi"></li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="js/jquery.min-1.9.1.js" charset="UTF-8"></script>
+		<script type="text/javascript">
+			//.children()只能返回直接子元素，不能返回后代元素
+			console.log($('.mylist').children());
+			//下一个兄弟元素
+			$('.mylist').eq(0).find('li').eq(1).next().css({
+				color:'red',
+			})
+			//上一个兄弟元素
+			$('.mylist').eq(0).find('li').eq(1).prev().css({
+				color:'green',
+			})
+			//注意parent()方法只能返回匹配元素的直接父元素，而不会匹配到祖先元素
+			$('.lastLi').parent().css({
+				border:"1px solid red",
+			})
+			//注意parents()方法返回匹配元素的所有祖辈元素
+			console.log($('.firstSpan').parents());
+			
+			console.log($(".mylist li").find(".firstSpan"));
+			$(".firstSpan").parent().siblings().css({
+				background:'skyblue',
+			})
+			
+//			$(".mylist").eq(0).find("li").each(function(i){
+//				alert(i);
+//			});
+//			end()方法返回第一次到最前面的选择器，在end()就是前面的标签
+			$(".mylist").eq(1).find('li').css({
+				height:100,
+				borderBottom:"1px solid blue"
+			}).end().css({
+				border:"2px solid green",
+			})
+		</script>
+	</body>
+</html>

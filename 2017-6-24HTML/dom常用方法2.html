@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.second{
+				width: 150px;
+				height: 100px;
+				background: skyblue;
+			}
+			.li{
+				color: violet;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="mylist">
+			<li></li>
+			<li md="123" class="li">你是谁</li>
+			<li></li>
+		</ul>
+		<input type="" name="" id="" value="" />
+		<script type="text/javascript" src="js/jquery.min-1.9.1.js" charset="UTF-8"></script>
+		<script type="text/javascript">
+			//添加类名
+			$('.mylist li').eq(1).addClass("second");
+			//删除类名
+			$(".mylist li").eq(1).removeClass("second");
+			//hasClass()方法是否有这个类名
+			console.log($(".mylist li").eq(1).hasClass('li'));
+			//获取元素的属性
+			console.log($(".mylist li").eq(1).attr("class"));
+			console.log($(".mylist li").eq(1).attr("md","456"));
+			//删除属性
+			$(".mylist li").eq(1).removeAttr("md");
+			
+			//html()既可以添加内容也可以获取
+			$(".mylist li").eq(0).html("我是第一个li");
+			console.log($(".mylist li").eq(1).html());
+			//设置或获取
+			$("input").val("这里是input内容");
+			console.log($("input").val());
+		</script>
+	</body>
+</html>

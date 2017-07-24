@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DSP_介绍</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/DSP_介绍.css"/>
+	</head>
+	<body>
+		<div class="zong clearfix">
+			<!--左边-->
+			<div class="left fl">
+				<div class="extend">
+					<p style="margin-top: 0;"></p>
+					<p></p>
+					<p></p>
+				</div>
+				
+				<div class="sanjiao">
+					<img src="img/1.png" alt="" />
+				</div>
+				<a href="#"><img src="img/2.png"/></a>
+			</div>
+			<!--右边-->
+			<div class="right common fr">
+				<p class="r-head">
+					<a href="#">51DSP.cn</a>
+				</p>
+				<!--大图滚动-->
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide"><a href="#"><img src="img/3.png"/></a></div>
+				        <div class="swiper-slide"><a href="#"><img src="img/3.png"/></a></div>
+				        <div class="swiper-slide"><a href="#"><img src="img/3.png"/></a></div>
+				    </div>
+				    
+				</div>
+				<!--头部导航-->
+				<div id="nav" class="clearfix">
+					<img class=' tu fl' src="img/4.png"/>
+					<p class='text fl'>2015年6月18日</p>
+					<img class="fl" src="img/6.png" style="margin-top:20px;" alt="" />
+					<ul class="fr clearfix" id="roll">
+						<li class="active">51DSP介绍</li>
+						<li>视频广告</li>
+						<li>移动端广告</li>
+						<li>外包项目</li>
+						<li>关于我们</li>
+						<li>联系方式</li>
+						<li id="ding"></li>
+					</ul>
+				</div>
+				<!--需求-->
+				<div class="need">
+						<img class="animated zoomIn" src="img/20.png"/>
+					<div class="need-text">
+						<div class="control">
+							<button>什么是DSP&nbsp;:</button>
+							<p>DSP英文全称“Demand Side Platform”，即广告需求方平台，为广告主提供跨媒介、跨平台、跨终端的广告投放平台，通过实时数据分析来进行购买、投放、优化报表。</p>
+							<span></span>
+						</div>
+					</div>
+				</div>
+				<!--定向用户-->
+				<div class="user">
+					<img class="animated rotateInDownLeft" src="img/22.png"/>
+					<div class="control conmons">
+						<img src="img/23.png"/>
+						<span></span>
+					</div>
+				</div>
+				<!--数据-->
+				<div class="data">
+					<img src="img/24.png"/>
+				</div>
+				<!--访客-->
+				<div class="visitior">
+					<img id="animate" src="img/25.png"/>
+					<div class="control conmons">
+						<img src="img/26.png"/>
+						<span></span>
+					</div>
+				</div>
+				<!--机智-->
+				<div class="witty">
+					<img class="animated wobble" src="img/27.png"/>
+					<div class="control conmons">
+						<img src="img/28.png"/>
+					</div>
+				</div>
+				<!--资源-->
+				<div id="resource">
+					<img src="img/29.png"/>
+					<div class="control conmons clearfix" id="trigger">
+						<div class="fl" id="main" style="width: 550px;height: 450px;"></div>
+						<img class="fl" src="img/46.png" alt="" />
+						<span></span>
+					</div>
+				</div>
+				<!--优质媒体资源-->
+				<div class="media">
+					<img src="img/31.png"/>
+					<div class="control conmons">
+						<img src="img/32.png"/>
+					</div>
+				</div>
+				<!--团队-->
+				<div class="team">
+					<img src="img/33.png"/>
+					<div class="control">
+						<img src="img/34.png"/>
+						<span></span>
+					</div>
+				</div>
+				<div class="foot">
+					<p class="one">京ICP备09083201号 京ICP证070419号  京公网安备:11010502026763
+</p>
+					<p class="two">Copyright©2015 51dsp.com All Rights Reserved</p>
+				</div>
+		</div>
+		
+		
+		<script src="js/swiper.min.js" type="text/javascript"></script>
+		<script src="js/tween.js" type="text/javascript"></script>
+		<script src="js/echarts.min.js" type="text/javascript"></script>
+		<script>       
+		  var mySwiper = new Swiper ('.swiper-container', {
+//		    direction: 'vertical',
+		    loop: true,
+		    autoplay:3000,
+		  })
+		  //获取标签
+		  var nav=document.getElementById('nav');
+		  var animate=document.getElementById('animate');
+		  var text=nav.getElementsByTagName('p')[0];
+		  
+		  var roll=document.getElementById('roll');
+		  var lis=roll.getElementsByTagName('li');
+		  var ding=roll.getElementsByTagName('li')[6];
+		 //资源的echart
+		 var resource=document.getElementById('resource');
+		 var trigger=document.getElementById('trigger');
+		 var imgs=trigger.getElementsByTagName('img')[0];
+		 var main=document.getElementById('main');
+		 var gao=0;
+		 
+		 var date=new Date();
+		  text.innerHTML="<p class='text fl'>"+date.getFullYear()+"年"+(date.getMonth()+1)+"月"+date.getDate()+"日</p>";
+		 	animate.onmouseover=function(){
+		 	this.className='center animated tada';
+		 }
+		 	animate.onmouseout=function(){
+		 	this.className='center';
+		 } 
+		  //单个li的宽度
+		  var picecliwidth=lis[0].offsetWidth;
+//		   console.log(picecliwidth);
+			var time=null;
+			var index=0; 
+		 //清除类名
+		 function clear(){
+			 	 for (var i=0; i<lis.length-1;i++) {
+			 	lis[i].className='';
+		 	}
+		 }
+		 //创建滚动的函数
+		 function move(ind){
+		 	var t=0;
+		 	var maxt=50;
+		 	var start=ding.offsetLeft;
+		 	var end=picecliwidth*ind;
+		 	var change=end-start;
+		 	clearInterval(time);	
+		 	time=setInterval(function(){
+		 		t++;
+		 		if(t>=maxt){
+		 			clearInterval(time);	
+		 		}
+		 		ding.style.left=Tween.Linear(t,start,change,maxt)+'px';
+		 	},5)
+		 }
+		 for (var i=0;i<lis.length-1;i++) {
+		 	//获取下标
+		 	lis[i].index=i;
+		 	lis[i].onmouseover=function(){
+		 		clear();
+		 		this.className='active';
+		 		move(this.index);
+		 	}
+		 	lis[i].onmouseout=function(){
+		 		clear();
+		 		lis[index].className='active';
+		 		move(index);
+		 	}
+		 	lis[i].onclick=function(){
+		 		index=this.index;
+		 	}
+		 }
+		 window.onscroll=function(){
+		 	gao=document.documentElement.scrollTop||document.body.scrollTop;
+		 	if (gao>=resource.offsetTop-200) {
+		 		datas();
+		 		imgs.style.display='block';
+		 		imgs.className='animated lightSpeedIn';
+		 	}
+		 	else{
+		 		imgs.style.display='none';
+		 	}
+		 }
+		 function datas(){
+		 	var myChart = echarts.init(document.getElementById('main'));
+					myChart.setOption({
+			    series : [{
+			            name: '访问来源',
+			            type: 'pie',
+			            radius: '75%',
+			            // roseType 显示成南丁格尔图，无它成饼图
+//			            roseType: "angle",
+			            data:[
+			                {value:18, name:'视频',itemStyle:{normal:{color:'#6b439c'}}},
+			                {value:8, name:'文学',itemStyle:{normal:{color:'#ae4097'}}},
+			                {value:8, name:'生活服务',itemStyle:{normal:{color:'#e44298'}}},
+			                {value:7, name:'财经',itemStyle:{normal:{color:'#ee1b24'}}},
+			                {value:6, name:'女性',itemStyle:{normal:{color:'#f57025'}}},
+			                {value:5, name:'教育学习',itemStyle:{normal:{color:'#f78e23'}}},
+			                {value:1, name:'娱乐',itemStyle:{normal:{color:'#ffc010'}}},
+			                {value:5, name:'新闻',itemStyle:{normal:{color:'#fbba06'}}},
+			                {value:4, name:'综合门户',itemStyle:{normal:{color:'#5ebff6'}}},
+			                {value:4, name:'军事',itemStyle:{normal:{color:'#d0c700'}}},
+			                {value:3, name:'旅游',itemStyle:{normal:{color:'#6bc100'}}},
+			                {value:3, name:'IT手机',itemStyle:{normal:{color:'#01a88e'}}},
+			                {value:3, name:'汽车',itemStyle:{normal:{color:'#008ecc'}}},
+			                {value:3, name:'购物',itemStyle:{normal:{color:'#0655a4'}}},
+			                {value:3, name:'亲子',itemStyle:{normal:{color:'#97d24b'}}},
+			                {value:3, name:'饮食',itemStyle:{normal:{color:'#6dc4f7'}}},
+			                {value:3, name:'房产',itemStyle:{normal:{color:'#7d0022'}}},
+			                {value:2, name:'时尚',itemStyle:{normal:{color:'#a40035'}}},
+			                {value:2, name:'期刊杂志',itemStyle:{normal:{color:'#00736d'}}},
+			                {value:2, name:'彩票',itemStyle:{normal:{color:'#81511c'}}},
+			                {value:2, name:'纠错页面',itemStyle:{normal:{color:'#eb6100'}}},
+			                {value:2, name:'B23',itemStyle:{normal:{color:'#a84200'}}},
+			            ]  
+			    }]
+			})
+		 }
+		
+  	</script>
+	</body>
+</html>

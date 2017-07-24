@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>dom操作</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				height: 100px;
+				background: violet;
+			}
+			.box1{
+				height: 100px;
+				background: skyblue;
+			}
+			#mylist{
+				list-style: none;
+			}
+			#mylist li{
+				height: 100px;
+				border-bottom: 1px solid violet;
+				background: skyblue;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="mylist">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+		<script type="text/javascript" src="js/jquery.min-1.9.1.js" charset="UTF-8"></script>
+		<script type="text/javascript">
+			//创建元素节点
+			//1：使用原生的js创建元素节点
+//			var box=document.createElement('div');
+//			box.className='box';
+//			document.body.appendChild(box);
+			
+			//2.使用jq创建元素节点
+				//创建元素节点
+//			var box1=$('<div class="box1"></div>');
+//			//添加到body中
+//			$('body').append(box1)
+			
+			
+			
+			//创建文本节点
+			//1:使用原生js创建文本节点
+//			var str=document.createTextNode('我是用原生js创建的文本节点');
+//			var box=document.createElement('div');
+//			box.className='box';
+//			box.appendChild(str);
+//			document.body.appendChild(box);
+
+			//2.使用jq创建文本节点
+//			var box1=$("<div class='box1'>我是用jq创建的文本</div>");
+//			$("body").append(box1);
+
+//			插入节点
+//			1：给元素内部添加节点为子元素append/prepend/appendTo/prependTo
+//				append方法 ".append"前面是目标元素，方法中传递的参数为被添加元素	
+//			$('#mylist').append($("<li>我是使用append方法添加的</li>"));
+//			appendTo方法“.appendTO”前面是被添加元素，方法中传递的是目标元素
+//			$("<li>我是使用appendTo方法添加的</li>").appendTo('#mylist');
+//			向目标元素中添加一个新的元素，
+//			$("#mylist").prepend($("<li>我是使用prepend方法添加的</li>"));
+//			把一个新的元素添加到目标元素中
+//			$("<li>我是使用prependTo方法添加的</li>").prependTo('#mylist');
+
+			//2:新增节点为兄弟元素，insertBefore/insertAfter/before/after
+//			$("#mylist li").eq(1).before($("<li>我是before方法添加的</li>"));
+//			
+//			$("<li>我是insertBefore方法添加的</li>").insertBefore("#mylist li:eq(1)");
+//			
+//			$("#mylist li").eq(1).after($("<li>我是after方法添加的</li>"));
+//					
+//			$("<li>我是insertAfter方法添加的</li>").insertAfter("#mylist li:eq(1)");
+
+
+
+//			删除节点
+//			1：原生js删除节点
+//			var lis=document.getElementsByTagName('li');
+//			lis[1].parentNode.removeChild(lis[1]);
+//			2:jq删除节点
+//			$("#mylist li").eq(1).remove();
+//			3;清空元素内部的节点或文本，并不能删除元素
+//			$("#mylist li").eq(1).empty();
+//
+//			替换节点
+//			1：原生js替换节点
+//			var mylist=document.getElementById('mylist');
+//			var lis=mylist.getElementsByTagName('li');
+//			var newli=document.createElement('li');
+//			newli.innerHTML="我是js新增替换li";
+			//注意被替换的元素与mylist必须是父子关系
+//			mylist.replaceChild(newli,lis[1]);
+//			2：jq替换节点
+//			$("<li>我是jq的replaceAll替换li</li>").replaceAll("#mylist li:eq(1)");
+//			$("#mylist li:eq(1)").replaceWith($("<li>我是jq的replaceWith替换li<li>"));
+//
+//
+//			复制节点
+//			1；原生js复制节点
+//			var mylist=document.getElementById('mylist');
+//			var lis=mylist.getElementsByTagName('li');
+//			//克隆第二个li，默认不复制子元素，如果需要深度克隆（即连同子元素一同复制），则需要传一个布尔值true
+//			var cloneli=lis[1].cloneNode(true);
+//			mylist.appendChild(cloneli);			
+//			2：jq复制节点close方法中两个参数均为布尔值，第一个参数表示是否复制该元素的事件，第二个参数表示是否深度复制
+//					事件绑定的方法1
+//			$("#mylist li").eq(1).click(function(){
+//				alert("2");
+//			})
+//			$("#mylist li").eq(1).clone(true,true).appendTo("#mylist");
+//					事件绑定的方法2
+//			$("#mylist li").on("click",function{
+//				
+//			})
+//							事件绑定的方法3
+//			$("#mylist li").bind("click",function{
+//				
+//			})
+		</script>
+	</body>
+</html>

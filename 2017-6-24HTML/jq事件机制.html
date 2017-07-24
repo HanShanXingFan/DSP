@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件绑定</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			li{
+				font-size: 30px;
+			}
+			button{
+				font-size: 30px;
+				padding:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="list">
+			<li>我是自带li</li>
+		</ul>
+		<button >添加li</button>
+		<button>移除事件</button>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript">
+//			使用live进行事件绑定的时候，可以将事件绑定到未来元素上，但需要慎用，jq-1.4以后都不支持了
+//			$('.list li').live("click",dayin);
+//	
+//			$("button").eq(1).click(function(){
+//				$(".list li").die('click',dayin)
+//			});
+//			function dayin(){
+//				console.log($(this).html());
+//			}
+//			$('button').eq(0).click(function(){
+//				$(".list").append($("<li>我是新添加的li</li>"));
+//			})
+//			原生js通过事件委托对未来元素进行事件绑定
+//			var list=document.getElementsByClassName('list')[0];
+//			var lis=list.getElementsByTagName('li');
+//			list.onclick=function(e){
+//				var e=e||window.event;
+//				var target=e.target||e.srcElement;
+//				if(target.nodeName=="LI"){
+//					console.log(target.innerHTML);
+//				}
+//			}
+
+//			使用delegate进行事件绑定及移除,同样可以将事件绑定到未来元素上，原理就是事件委托
+//			$(".list").delegate("li","click",dayin);
+//			$("button").eq(1).click(function(){
+//				$(".list").undelegate("li","click",dayin);
+//			});
+//
+//			直接选中要绑定的元素，无法为未来元素绑定事件
+//			$(".list li").bind("click",dayin)
+//			$("button").eq(1).click(function(){
+//				$(".list li").unbind("click",dayin);
+//			});
+//
+//			推荐事件绑定方式on，进行事件绑定,注意这种写法，不会对未来元素进行事件绑定
+//			$(".list li").on("click",dayin);
+//			这种写法可以对未来元素进行事件绑定
+//			$(".list").on("click","li",dayin);
+//			$("button").eq(1).click(function(){
+//				$(".list").off("click","li",dayin);
+//			})
+//			//
+//			$(".list li").eq(0).one("click",dayin);
+		</script>
+	</body>
+</html>

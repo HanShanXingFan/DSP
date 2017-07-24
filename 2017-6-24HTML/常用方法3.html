@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.outer{
+				width: 400px;
+				height: 200px;
+				border: 1px solid red;
+				overflow: scroll;
+			}
+			.inner{
+				width: 1000px;
+				height: 196px;
+			}
+			.boxouter{
+				width: 500px;
+				height: 500px;
+				background: pink;
+				margin: 100px 200px;
+				position: relative;
+			}
+			.box2{
+				width: 100px;
+				height: 100px;
+				background: black;
+				position: absolute;
+				left: 100px;
+				top:0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="boxouter">
+			<div class="box2"></div>
+		</div>
+		
+		<div class="outer">
+			<div class="inner">jsldghoghsdaghiv;lskl;dnbasgl;lshdlglgjw0rugoperjhgperpgpoegefpfpjjkldjlorejjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</div>
+		</div>
+		<button class="btn">获取outer的scroll</button>
+		<script type="text/javascript" src="js/jquery.min-1.9.1.js" charset="UTF-8"></script>
+		<script type="text/javascript">
+			$(".box1").css({
+				width:100,
+				height:100,
+				background:"red",
+			})
+			//写一个样式的时候
+			$(".box1").css("borderRight","4px solid black");
+			console.log($(".box1").css("borderRight"));
+			
+			$(".box1").width("300px");
+			console.log($(".box1").width());
+			
+			$(".btn").click(function(){
+				console.log($(".outer").scrollLeft());//获取元素水平偏移量
+				
+			})
+			//不要加px
+			$(".outer").scrollLeft("300");
+			
+			//获取元素相对于浏览器窗口的距离
+			console.log($(".box2").offset().left);
+			//获取元素相对于父元素的距离
+			console.log($(".box2").position().left);
+		</script>
+	</body>
+</html>

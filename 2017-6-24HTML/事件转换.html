@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件转换</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 100px;
+				height: 100px;
+				background: violet;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript">
+			var box=document.getElementById("box");
+			//将原生js dom节点对象转换成jq对象只需$()
+			$(box).css({
+				width:200,
+				height:200,
+				background:"skyblue",
+			})
+			//将jq对象转换成原生js对象，jq存储的是数组，需要通过数组形式使用
+			var box1=$("#box");
+			box1[0].onclick=function(){
+				alert("干!");
+			}
+			box1.get(0).onclick=function(){
+				alert("就是干!");
+			}
+		</script>
+	</body>
+</html>

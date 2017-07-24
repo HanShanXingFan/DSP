@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>$符号冲突问题（多个引用）</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 100px;
+				height: 100px;
+				background: violet;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/prototype-1.6.0.js"></script>
+		<script type="text/javascript">
+//			$("#box").click(function(){
+//				alert("就是干！");
+//			})
+			$("box").onclick=function(){
+				alert("就是干！");
+			}
+			//css样式内像素不加px
+			//不是function写完记得加“，”是function的话加“；”
+			jQuery("#box").css({
+				width:200,
+				height:200,
+			})
+			//自定义jQuery的简写比如jq
+			var jq=jQuery.noConflict();
+			jq("#box").css({
+				background:"skyblue",
+			})
+			//还想用$符号，将$传递给ready函数，$只能在ready函数内部使用
+			jQuery(function($){
+				$("#box").css({
+					width:300,
+					background:"orange",
+				})
+			})
+		</script>
+	</body>
+</html>

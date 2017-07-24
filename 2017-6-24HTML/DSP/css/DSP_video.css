@@ -1,0 +1,197 @@
+body{
+	min-width:1150px;
+}
+.common{
+	width:1801px;
+	/*padding-left: 115px;*/
+}
+.conmons{
+	padding-left: 115px;
+}
+/*左部*/
+.left{
+	background: #051623;
+	width: 102px;
+	height: 1796px;
+	position: relative;
+}
+.left>.extend{
+	position: absolute;
+	left: 32px;
+	top:15px;
+}
+.left>.extend:hover:after{
+	content:"";
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
+	background:#051623;
+	position: absolute;
+	top:-20px;
+	left: 70px;
+	z-index:10;
+}
+.left>.extend>p{
+	width: 35px;
+	height: 1px;
+	background: #fff;
+	margin-top:15px;
+}
+.sanjiao{
+	position: absolute;
+	left: 43px;
+	top: 98px;
+}
+.left>a{
+	position: absolute;
+	left: 19px;
+	top:110px;
+}
+.r-head{
+	background: #21242a;
+	height: 57px;
+	text-align: center;
+	line-height: 57px;
+	font-size: 24px;
+}
+.r-head>a{
+	color: #fff;	
+}
+.swiper-container{
+	height: 628px;
+	position: relative;
+	z-index: -1;
+}
+.swiper-slide>a>img{
+	display: block;
+}
+/*导航*/
+#nav{
+	width: 1801px;
+	background: url(../img/5.png) no-repeat 0 0;
+	background-size: 1801px auto;
+	position: absolute;
+	left: 102px;
+	top:618px;
+}
+#nav>.tu{
+	display: block;
+	margin-right: 12px;
+}
+#nav>.text{
+	float: left;
+	font-size: 14px;
+	color: #fff;
+	line-height: 68px;
+	margin-right: 20px;
+}
+#nav>ul{
+	list-style: none;
+	position: relative;
+}
+#nav>ul>li{
+	float: left;
+	width: 149px;
+	height: 67px;
+	color:#fff;
+	font-size: 14px;
+	line-height: 67px;
+	text-align: center;
+	border-left: 1px solid rgba(0,0,0,.2);
+	/*background: rgba(255,255,255,.1);*/
+	/*box-shadow: 5px 5px 5px #ccc;*/
+}
+#nav>ul>.active{
+	color:gold;
+}
+#nav>ul>#ding{
+	position: absolute;
+	left: 0;
+	top:0;
+	background: rgba(255,255,255,.1);
+	z-index: -1;
+}
+/*组合*/
+.group>img{
+	display: block;
+	margin: 0 auto;
+	padding-top:31px;
+	padding-bottom: 20px;
+}
+/*手机*/
+.cellphone{
+	background: #f2f0f0;
+	position: relative;
+}
+.cellphone>ul{
+	list-style: none;
+	width: 840px;
+	margin: 0 auto;
+	padding-bottom: 31px;
+	padding-top: 50px;
+    padding-right: 80px;
+}
+.cellphone>ul>li{
+	float: left;
+	margin-left: 69px;
+	width: 211px;
+	height: 369px;
+	position: relative;
+}
+.cellphone>ul>li>.animation{
+	height: 100%;
+	transition: all 1s;
+	opacity:0;
+}
+.cellphone>ul>li>.animation>p{
+	width: 188px;
+	height: 28px;
+	background: rgba(0,0,0,.3);
+	position:absolute;
+	left: 13px;
+	bottom: 38px;
+}
+.cellphone>ul>li>.animation>span{
+	position: absolute;
+	left: 86px;
+	bottom: 42px;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+}
+.cellphone>ul>li>.animation:hover{
+	opacity: 1;
+}
+
+
+.cellphone>.control>span{
+	display: block;
+	width:0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #FFFFFF;
+	position: absolute;
+	top: 0px;
+	left: 48.6%;
+}
+/*页脚*/
+.foot{
+	background: #ba0013;
+}
+.foot>.one{
+	width: 410px;
+	padding-top:30px;
+	padding-bottom: 10px;
+	margin: 0 auto;
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+}
+.foot>.two{
+	width: 280px;
+	margin: 0 auto;
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+	padding-bottom: 35px;
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DSP首页</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/dsp.css"/>
+	</head>
+	<body>
+		<div class="zong clearfix">
+			<!--左边-->
+			<div class="left fl">
+				<p></p>
+				<p></p>
+				<p></p>
+				<div class="sanjiao">
+					<img src="img/1.png" alt="" />
+				</div>
+				<a href="#"><img src="img/2.png"/></a>
+			</div>
+			
+			<!--右边-->
+			<div class="right common fr">
+				<p class="r-head">
+					<a href="#">51DSP.cn</a>
+				</p>
+				<!--大图滚动-->
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide"><a href="#"><img src="img/3.png"/></a></div>
+				        <div class="swiper-slide"><a href="#"><img src="img/3.png"/></a></div>
+				        <div class="swiper-slide"><a href="#"><img src="img/3.png"/></a></div>
+				    </div>
+				    
+				</div>
+				<!--头部导航-->
+				<div id="nav" class="clearfix">
+					<img class=' tu fl' src="img/4.png"/>
+					<p class='text fl'>2015年6月18日</p>
+					<img class="fl" src="img/6.png" style="margin-top:20px;" alt="" />
+					<ul class="fr clearfix" id="roll">
+						<li class="active">51DSP介绍</li>
+						<li>视频广告</li>
+						<li>移动端广告</li>
+						<li>外包项目</li>
+						<li>关于我们</li>
+						<li>联系方式</li>
+						<li id="ding"></li>
+					</ul>
+				</div>
+				<!--51介绍-->
+				<div class="introduce">
+					<img class="animated flip " src="img/7.png"/>
+					<p>依托大数据时代下的精准营销51DSP是助力企业腾飞的首选伙伴</p>
+					<button>查看详情</button>
+					<img class="tubiao" src="img/8.png"/>
+				</div>
+				<!--<!-案例-->
+				<div class="works">
+					<div class="center " id="animate">
+						<img src="img/9.png"/>
+					</div>
+					<p>强势的媒体资源 / 资深的数据团队 / 精准的保证</p>
+					<img class="date" src="img/10.png"/>
+				</div>
+				<!--视频广告-->
+				<div class="video">
+					<div class="center">
+						<img src="img/11.png"/>
+					</div>
+					<p>各大视频网站资源通过大数据分析定位人群，定位投放，品牌效果双收益</p>
+					<img class="viedew-adv" src="img/12.png"/>
+				</div>
+				<!--移动端广安-->
+				<div class="mobile">
+					<div class="center">
+						<img src="img/13.png"/>
+					</div>
+					<p>吸纳国内/外媒体资源，国内独家海外媒体对接平台，发挥平台优势承载企业翱翔~</p>
+					<img class="mobile-adv" src="img/14.png"/>
+					
+				</div>
+				<!--关于我们-->
+				<div class="about">
+					<div class="center">
+						<img src="img/15.png"/>
+					</div>
+					<p>51dsp.com是一家提供互联网广告传播服务与技术平台服务的高新技术型公司于先进而高效的广告程序化购买业务。整合展示类广告、视频广告、移动广告等资源，为客户量身定制广告投放解决方案，并通过大数据挖掘与学习算法提升广告展示效果，实现广告效益的最大化。作为业界知名、技术成熟、体制完善的网络广告技术供应商，迅速成为了中国互联网广告行业的新锐力量。</p>
+					<img class="about-text" src="img/16.png"/>
+					<p class="message">51dsp.com隶属于北京xxx有限公司， 是一家提供互联网广告传播服务与技术平台服务的高新技术型公司，致力于先进而高效的广告程序化购买业务。整合展示类广告、视频广告、移动广告等资源，为客户量身定制广告投放解决方案，并通过大数据挖掘与学习算法提升广告展示效果，实现广告效益的最大化。作为业界知名、技术成熟、体制完善的网络广告技术供应商，迅速成为了中国互联网广告行业的新锐力量。</p>
+				</div>
+				<!--广告咨询-->
+				<div class="advice clearfix">
+					<div class="center">
+						<img src="img/17.png"/>
+					</div>
+					<p>速度、效率、是我们应答的第一原则</p>
+					<img class="advice-tu" src="img/18.png"/>
+					<img class="advice-number fl" src="img/19.png"/>
+					<button>立即留言</button>
+				</div>
+				<div class="foot">
+					<p class="one">京ICP备09083201号 京ICP证070419号  京公网安备:11010502026763
+</p>
+					<p class="two">Copyright©2015 51dsp.com All Rights Reserved</p>
+				</div>
+			</div>
+		</div>
+		<script src="js/swiper.min.js" type="text/javascript"></script>
+		<script src="js/tween.js" type="text/javascript"></script>
+		<script>       
+		  var mySwiper = new Swiper ('.swiper-container', {
+//		    direction: 'vertical',
+		    loop: true,
+		    autoplay:3000,
+		  })
+		  //获取标签
+		  var nav=document.getElementById('nav');
+		  var animate=document.getElementById('animate');
+		  var text=nav.getElementsByTagName('p')[0];
+		  
+		  var roll=document.getElementById('roll');
+		  var lis=roll.getElementsByTagName('li');
+		  var ding=roll.getElementsByTagName('li')[6];
+		 
+		 var date=new Date();
+		  text.innerHTML="<p class='text fl'>"+date.getFullYear()+"年"+(date.getMonth()+1)+"月"+date.getDate()+"日</p>";
+		 animate.onmouseover=function(){
+		 	this.className='center animated rotateIn';
+		 }
+		 animate.onmouseout=function(){
+		 	this.className='center';
+		 }
+		 
+		  //单个li的宽度
+		  var picecliwidth=lis[0].offsetWidth;
+//		   console.log(picecliwidth);
+			var time=null;
+			var index=0;
+	 
+		 //清除类名
+		 function clear(){
+			 	 for (var i=0; i<lis.length-1;i++) {
+			 	lis[i].className='';
+		 	}
+		 }
+		 //创建滚动的函数
+		 function move(ind){
+		 	var t=0;
+		 	var maxt=50;
+		 	var start=ding.offsetLeft;
+		 	var end=picecliwidth*ind;
+		 	var change=end-start;
+		 	clearInterval(time);	
+		 	time=setInterval(function(){
+		 		t++;
+		 		if(t>=maxt){
+		 			clearInterval(time);	
+		 		}
+		 		ding.style.left=Tween.Linear(t,start,change,maxt)+'px';
+		 	},5)
+		 }
+		 for (var i=0;i<lis.length-1;i++) {
+		 	//获取下标
+		 	lis[i].index=i;
+		 	lis[i].onmouseover=function(){
+		 		clear();
+		 		this.className='active';
+		 		move(this.index);
+		 	}
+		 	lis[i].onmouseout=function(){
+		 		clear();
+		 		lis[index].className='active';
+		 		move(index);
+		 	}
+		 	lis[i].onclick=function(){
+		 		index=this.index;
+		 	}
+		 }
+  	</script>
+	</body>
+</html>

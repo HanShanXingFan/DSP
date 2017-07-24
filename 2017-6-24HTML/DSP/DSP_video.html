@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>视频广告</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/DSP_video.css"/>
+	</head>
+	<body>
+		<div class="zong clearfix">
+						<!--左边-->
+			<div class="left fl">
+				<div class="extend">
+					<p style="margin-top: 0;"></p>
+					<p></p>
+					<p></p>
+				</div>
+				
+				<div class="sanjiao">
+					<img src="img/1.png" alt="" />
+				</div>
+				<a href="#"><img src="img/2.png"/></a>
+			</div>
+			<!--右边-->
+			<div class="right common fr">
+				<p class="r-head">
+					<a href="#">51DSP.cn</a>
+				</p>
+				<!--大图滚动-->
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide"><a href="#"><img src="img/3.png"/></a></div>
+				        <div class="swiper-slide"><a href="#"><img src="img/3.png"/></a></div>
+				        <div class="swiper-slide"><a href="#"><img src="img/3.png"/></a></div>
+				    </div>
+				    
+				</div>
+				<!--头部导航-->
+				<div id="nav" class="clearfix">
+					<img class=' tu fl' src="img/4.png"/>
+					<p class='text fl'>2015年6月18日</p>
+					<img class="fl" src="img/6.png" style="margin-top:20px;" alt="" />
+					<ul class="fr clearfix" id="roll">
+						<li class="active">51DSP介绍</li>
+						<li>视频广告</li>
+						<li>移动端广告</li>
+						<li>外包项目</li>
+						<li>关于我们</li>
+						<li>联系方式</li>
+						<li id="ding"></li>
+					</ul>
+				</div>
+				<!--组合-->
+				<div class="group">
+					<img src="img/42.png"/>
+				</div>
+				<!--手机-->
+				<div class="cellphone">
+					<ul class="clearfix">
+						<li style="background: url(img/43.png) no-repeat;">
+							<div class="animation">
+								<p></p>
+								<span>优酷网</span>
+							</div>
+						</li>
+						<li style="background: url(img/44.png) no-repeat;">
+							<div class="animation">
+								<p></p>
+								<span>努比亚</span>
+							</div>
+						</li>
+						<li style="background: url(img/45.png) no-repeat;">
+							<div class="animation">
+								<p></p>
+								<span>虎牙</span>
+							</div>
+						</li>
+					</ul>
+					<div class="control">
+						<span></span>
+					</div>
+				</div>
+				
+				<div class="foot">
+					<p class="one">京ICP备09083201号 京ICP证070419号  京公网安备:11010502026763
+</p>
+					<p class="two">Copyright©2015 51dsp.com All Rights Reserved</p>
+				</div>
+		</div>
+		</div>
+		<script src="js/swiper.min.js" type="text/javascript"></script>
+		<script src="js/tween.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var mySwiper = new Swiper ('.swiper-container', {
+//		    direction: 'vertical',
+		    loop: true,
+		    autoplay:3000,
+		  })
+		  //获取标签
+		  var nav=document.getElementById('nav');
+//		  var animate=document.getElementById('animate');
+		  var text=nav.getElementsByTagName('p')[0];
+		  
+		  var roll=document.getElementById('roll');
+		  var lis=roll.getElementsByTagName('li');
+		  var ding=roll.getElementsByTagName('li')[6];
+		 
+		 var date=new Date();
+		  text.innerHTML="<p class='text fl'>"+date.getFullYear()+"年"+(date.getMonth()+1)+"月"+date.getDate()+"日</p>";
+//		 	animate.onmouseover=function(){
+//		 	this.className='center animated tada';
+//		 }
+//		 	animate.onmouseout=function(){
+//		 	this.className='center';
+//		 }
+		 
+		  //单个li的宽度
+		  var picecliwidth=lis[0].offsetWidth;
+//		   console.log(picecliwidth);
+			var time=null;
+			var index=0;
+
+		 
+		 //清除类名
+		 function clear(){
+			 	 for (var i=0; i<lis.length-1;i++) {
+			 	lis[i].className='';
+		 	}
+		 }
+		
+		 //创建滚动的函数
+		 function move(ind){
+		 	var t=0;
+		 	var maxt=50;
+		 	var start=ding.offsetLeft;
+		 	var end=picecliwidth*ind;
+		 	var change=end-start;
+		 	clearInterval(time);	
+		 	time=setInterval(function(){
+		 		t++;
+		 		if(t>=maxt){
+		 			clearInterval(time);	
+		 		}
+		 		ding.style.left=Tween.Linear(t,start,change,maxt)+'px';
+		 	},5)
+		 }
+		 for (var i=0;i<lis.length-1;i++) {
+		 	//获取下标
+		 	lis[i].index=i;
+		 	lis[i].onmouseover=function(){
+		 		clear();
+		 		this.className='active';
+		 		move(this.index);
+		 	}
+		 	lis[i].onmouseout=function(){
+		 		clear();
+		 		lis[index].className='active';
+		 		move(index);
+		 	}
+		 	lis[i].onclick=function(){
+		 		index=this.index;
+		 	}
+		 }
+		</script>
+	</body>
+</html>

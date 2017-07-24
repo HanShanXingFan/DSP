@@ -1,0 +1,266 @@
+body{
+	min-width:1150px;
+}
+.common{
+	width:1801px;
+	/*padding-left: 115px;*/
+}
+.conmons{
+	padding-left: 115px;
+}
+/*左部*/
+.left{
+	background: #051623;
+	width: 102px;
+	height: 3596px;
+	position: relative;
+}
+.left>.extend{
+	position: absolute;
+	left: 32px;
+	top:15px;
+}
+.left>.extend:hover:after{
+	content:"";
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
+	background:#051623;
+	position: absolute;
+	top:-20px;
+	left: 70px;
+	z-index:10;
+}
+.left>.extend>p{
+	width: 35px;
+	height: 1px;
+	background: #fff;
+	margin-top:15px;
+}
+.sanjiao{
+	position: absolute;
+	left: 43px;
+	top: 98px;
+}
+.left>a{
+	position: absolute;
+	left: 19px;
+	top:110px;
+}
+.r-head{
+	background: #21242a;
+	height: 57px;
+	text-align: center;
+	line-height: 57px;
+	font-size: 24px;
+}
+.r-head>a{
+	color: #fff;	
+}
+.swiper-container{
+	height: 628px;
+	position: relative;
+	z-index: -1;
+}
+.swiper-slide>a>img{
+	display: block;
+}
+/*导航*/
+#nav{
+	width: 1801px;
+	background: url(../img/5.png) no-repeat 0 0;
+	background-size: 1801px auto;
+	position: absolute;
+	left: 102px;
+	top:618px;
+}
+#nav>.tu{
+	display: block;
+	margin-right: 12px;
+}
+#nav>.text{
+	float: left;
+	font-size: 14px;
+	color: #fff;
+	line-height: 68px;
+	margin-right: 20px;
+}
+#nav>ul{
+	list-style: none;
+	position: relative;
+}
+#nav>ul>li{
+	float: left;
+	width: 149px;
+	height: 67px;
+	color:#fff;
+	font-size: 14px;
+	line-height: 67px;
+	text-align: center;
+	border-left: 1px solid rgba(0,0,0,.2);
+	/*background: rgba(255,255,255,.1);*/
+	/*box-shadow: 5px 5px 5px #ccc;*/
+}
+#nav>ul>.active{
+	color:gold;
+}
+#nav>ul>#ding{
+	position: absolute;
+	left: 0;
+	top:0;
+	background: rgba(255,255,255,.1);
+	z-index: -1;
+}
+/*广告*/
+.advert>img{
+	display: block;
+	margin: 0 auto;
+	padding-top:31px;
+	padding-bottom: 20px;
+}
+/*国内*/
+.home{
+	background: #f2f0f0;
+	position: relative;
+}
+.home>img{
+	display: block;
+	margin: 0 auto;
+	padding-top:40px;
+	padding-bottom: 20px;
+}
+.home>.control>span{
+	display: block;
+	width:0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #FFFFFF;
+	position: absolute;
+	top: 0px;
+	left: 48.6%;
+}
+/*国外*/
+.abroad>img{
+	display: block;
+	margin: 0 auto;
+	padding-top:31px;
+	padding-bottom: 20px;
+}
+/*位置*/
+.position{
+	background: #f2f0f0;
+	position: relative;
+}
+.position>p{
+	color: #e94b59;
+	font-size: 30px;
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	margin: 0 auto;
+	padding-top:35px;
+	padding-bottom: 20px;
+}
+.position>ul{
+	list-style: none;
+	margin: 0 auto;
+	width: 1026px;
+	padding-bottom: 30px;
+}
+.position>ul>li{
+	width: 280px;
+	height: 280px;
+	border-radius: 50%;
+	overflow: hidden;
+	float: left;
+	margin-left: 93px;
+	position: relative;
+}
+.position>ul>li>.control{
+	height: 100%;
+	transition: all 1s;
+	opacity: 0;
+}
+.position>ul>li>.control>a{
+	display: block;
+	width:100%;
+	height: 55px;
+	position: absolute;
+	top:225px;
+	left: 0;
+	background: #000000;
+	opacity: 0.3;
+}
+.position>ul>li>.control:hover{
+	opacity:1;
+}
+.position>ul>li>.control>span{
+	color: #FFFFFF;
+	font-size: 16px;
+	position: absolute;
+	top:240px;
+	left: 113px;
+}
+.position>ul>li:nth-of-type(1){
+	margin-left: 0;
+}
+.position>.control>span{
+	display: block;
+	width:0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #FFFFFF;
+	position: absolute;
+	top: 0px;
+	left: 48.6%;
+}
+/*用户*/
+.user>img{
+	display: block;
+	margin: 0 auto;
+	padding-top:31px;
+	padding-bottom: 20px;
+}
+/*数据*/
+.data{
+	background: #f2f0f0;
+	position: relative;
+}
+.data>img{
+	display: block;
+	margin: 0 auto;
+	padding-top:40px;
+	padding-bottom: 20px;
+}
+.data>.control>span{
+	display: block;
+	width:0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #FFFFFF;
+	position: absolute;
+	top: 0px;
+	left: 48.6%;
+}
+/*页脚*/
+.foot{
+	background: #ba0013;
+}
+.foot>.one{
+	width: 410px;
+	padding-top:30px;
+	padding-bottom: 10px;
+	margin: 0 auto;
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+}
+.foot>.two{
+	width: 280px;
+	margin: 0 auto;
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+	padding-bottom: 35px;
+}
